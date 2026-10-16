@@ -1,0 +1,13 @@
+name: FranekCoinFlip
+version: '1.0'
+main: dev.franek.coinflip.FranekCoinFlip
+api-version: '1.20'
+author: franekk
+depend:
+  - Vault
+website: https://github.com/Blejziak
+description: Plugin made by franekk - https://github.com/Blejziak
+commands:
+  coinflip:
+    description: Otwiera menu gier CoinFlip
+    usage: /coinflip

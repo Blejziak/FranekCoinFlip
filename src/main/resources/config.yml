@@ -1,0 +1,110 @@
+# Konfiguracja FranekCoinFlip
+# Plugin made by franekk - https://github.com/Blejziak
+
+gui-titles:
+  main: "CoinFlip"
+  active-games: "Aktywne Gry CoinFlip"
+  your-games: "Twoje Gry CoinFlip"
+  coin-flip-animation: "&bRzut Moneta!"
+  winner-display: "&aZwyciezca!"
+
+main-gui:
+  items:
+    active-games:
+      name: "&aAktywne Gry"
+      lore:
+        - "&7Kliknij, aby zobaczyc aktywne gry."
+      slot: 10
+    your-games:
+      name: "&eTwoje Gry"
+      lore:
+        - "&7Kliknij, aby zobaczyc swoje gry."
+      slot: 13
+    create-game:
+      name: "&bStworz Gre"
+      lore:
+        - "&7Maksymalnie 50% Twojego majatku."
+        - "&7Serwer pobiera 3% prowizji."
+      slot: 16
+    notifications:
+      on-name: "&aPowiadomienia: WLACZONE"
+      on-lore:
+        - "&7Otrzymasz powiadomienia o:"
+        - "&7- utworzonych grach"
+        - "&7- wygranych grach"
+        - "&7Kliknij, aby wylaczyc."
+      off-name: "&cPowiadomienia: WYLACZONE"
+      off-lore:
+        - "&7Nie bedziesz otrzymywac powiadomien."
+        - "&7Kliknij, aby wlaczyc."
+      slot: 32
+    close-button:
+      name: "&cZamknij!"
+      lore:
+        - "&7Kliknij, aby zamknac"
+      slot: 31
+
+active-games-gui:
+  items:
+    game-item:
+      name: "&fGra gracza: &a%player_name%"
+      lore:
+        - "&7Stawka: &e%bet_amount% &6monet"
+        - "&7Kliknij, aby dolaczyc do gry!"
+    back-button:
+      name: "&7Powrot"
+      lore:
+        - "&fKliknij, aby wrocic do glownego menu."
+      offset: 5
+
+your-games-gui:
+  items:
+    game-item:
+      pending-name: "&fTwoja gra: &eoczekuje"
+      in-progress-name: "&fTwoja gra: &6w trakcie"
+      won-name: "&fTwoja gra: &aWYGRANA"
+      lost-name: "&fTwoja gra: &cPRZEGRANA"
+      cancelled-name: "&fTwoja gra: &7ANULOWANA"
+      lore:
+        - "&7Status: %status%"
+        - "&7Stawka: &e%bet_amount% &6monet"
+        - "&7Przeciwnik: &f%opponent_name%"
+        - "&7Data: &f%date%"
+    back-button:
+      name: "&7Powrot"
+      lore:
+        - "&fKliknij, aby wrocic do glownego menu."
+      offset: 5
+
+messages:
+  invalid-amount: "&cNieprawidlowa kwota! Wpisz liczbe."
+  amount-too-low: "&cKwota zakladu musi byc wieksza od zera."
+  too-much-money: "&cNie mozesz postawic wiecej niz 50% swojego majatku! (Posiadasz: &f%player_balance%&c)"
+  not-enough-money: "&cNie masz wystarczajaco pieniedzy! Potrzebujesz &f%needed_amount%&c."
+  game-created: "&aStworzono gre CoinFlip za &f%bet_amount%&a! Gra jest dostepna w 'Aktywnych Grach'."
+  game-already-in-progress: "&cTa gra jest juz w trakcie lub zakonczona!"
+  cannot-join-own-game: "&cNie mozesz dolaczyc do wlasnej gry!"
+  not-enough-money-to-join: "&cNie masz wystarczajaco pieniedzy, aby dolaczyc! Potrzebujesz &f%needed_amount%&c."
+  game-joined: "&aDolaczyles do gry CoinFlip!"
+  opponent-joined-creator: "&a%opponent_name% dolaczyl do Twojej gry CoinFlip!"
+  game-not-found: "&cTa gra juz nie istnieje lub zostala anulowana."
+  game-identification-error: "&cWystapil blad podczas identyfikacji gry. Skontaktuj sie z administracja."
+  opponent-disconnected-return-stake-creator: "&cTwoj przeciwnik (&f%opponent_name%&c) wylogowal sie! Twoja stawka zostala zwrocona."
+  opponent-disconnected-return-stake-joiner: "&cTwoj przeciwnik (&f%creator_name%&c) wylogowal sie! Twoja stawka zostala zwrocona."
+  coin-flip-ended: "&aRzut moneta zakonczony!"
+  you-won: "&6Gratulacje! &aWygrales &f%winnings_amount%&a!"
+  you-lost: "&cNiestety, przegrales. Moze nastepnym razem!"
+  notifications-toggled: "&aPowiadomienia CoinFlip zostaly &f%status%."
+
+notifications:
+  game-created: "&a%player_name%&c utworzyl gre o &f%bet_amount%&a! Wpisz &a/coinflip&c aby dolaczyc!"
+  game-won: "&f%winner_name%&c wygral gre o &f%winnings_amount%&c!"
+
+timings:
+  animation-duration-seconds: 10
+  animation-interval-ticks: 5
+  winner-display-duration-seconds: 3
+
+game-settings:
+  tax-percentage: 0.03
+  max-bet-percentage: 0.50

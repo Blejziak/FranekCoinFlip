@@ -6,10 +6,6 @@ Prosty plugin na coinflipa w GUI pod Vaulta. Gracz wpisuje `/coinflip`, klika tw
 
 Mozna tez przegladac swoje aktywne gry i wylaczyc powiadomienia o coinflipach na czacie.
 
-## Podglad w grze
-
-![showcase](assets/showcase.png)
-
 ## Komendy
 
 | Komenda | Co robi |
